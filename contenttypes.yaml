@@ -1,0 +1,236 @@
+# Content Types Configuration for EBL Tours CMS
+
+pages:
+  name: Pages
+  singular_name: Page
+  fields:
+    title:
+      type: text
+      required: true
+    slug:
+      type: slug
+      uses: title
+    content:
+      type: html
+      height: 300px
+    meta_description:
+      type: text
+      label: "Meta Description"
+    meta_keywords:
+      type: text
+      label: "Meta Keywords"
+    featured_image:
+      type: image
+      label: "Featured Image"
+    status:
+      type: select
+      values: [published, draft]
+      default: draft
+  listing_template: pages_listing.twig
+  record_template: page.twig
+  listing_records: 10
+  default_status: published
+  searchable: true
+  viewless: false
+
+tours:
+  name: Tours
+  singular_name: Tour
+  fields:
+    title:
+      type: text
+      required: true
+    slug:
+      type: slug
+      uses: title
+    description:
+      type: textarea
+      height: 150px
+    full_description:
+      type: html
+      height: 300px
+    featured_image:
+      type: image
+      required: true
+    gallery:
+      type: imagelist
+      label: "Gallery Images"
+    price:
+      type: text
+      label: "Price"
+    duration:
+      type: text
+      label: "Duration"
+    difficulty:
+      type: select
+      values: [easy, moderate, challenging]
+      default: easy
+    highlights:
+      type: repeater
+      fields:
+        highlight:
+          type: text
+    location:
+      type: text
+      label: "Location"
+    category:
+      type: select
+      values: [cataratas, itaipu, city-tour, parque-aves, marco-fronteiras, personalizado]
+    featured:
+      type: checkbox
+      label: "Featured Tour"
+    meta_description:
+      type: text
+      label: "Meta Description"
+    status:
+      type: select
+      values: [published, draft]
+      default: draft
+  listing_template: tours_listing.twig
+  record_template: tour.twig
+  listing_records: 12
+  default_status: published
+  searchable: true
+  sort: -datecreated
+
+testimonials:
+  name: Testimonials
+  singular_name: Testimonial
+  fields:
+    name:
+      type: text
+      required: true
+      label: "Customer Name"
+    photo:
+      type: image
+      label: "Customer Photo"
+    rating:
+      type: select
+      values: [1, 2, 3, 4, 5]
+      default: 5
+    review:
+      type: textarea
+      height: 150px
+      required: true
+    tour_taken:
+      type: text
+      label: "Tour Taken"
+    date:
+      type: date
+      default: "now"
+    location:
+      type: text
+      label: "Customer Location"
+    featured:
+      type: checkbox
+      label: "Featured Testimonial"
+    status:
+      type: select
+      values: [published, draft]
+      default: draft
+  listing_template: testimonials_listing.twig
+  record_template: testimonial.twig
+  listing_records: 20
+  default_status: published
+  sort: -date
+
+travel_safe_items:
+  name: Travel Safe Items
+  singular_name: Travel Safe Item
+  fields:
+    title:
+      type: text
+      required: true
+    icon:
+      type: text
+      label: "FontAwesome Icon Class"
+      postfix: "e.g., fas fa-heart"
+    description:
+      type: textarea
+      height: 100px
+    content:
+      type: html
+      height: 200px
+    order:
+      type: number
+      default: 1
+    color:
+      type: text
+      label: "Color Theme"
+      default: "green"
+    status:
+      type: select
+      values: [published, draft]
+      default: draft
+  listing_template: travel_safe_listing.twig
+  listing_records: 20
+  default_status: published
+  sort: order
+
+hero_sections:
+  name: Hero Sections
+  singular_name: Hero Section
+  fields:
+    title:
+      type: text
+      required: true
+    subtitle:
+      type: textarea
+      height: 100px
+    background_image:
+      type: image
+      required: true
+    cta_text:
+      type: text
+      label: "CTA Button Text"
+      default: "Know More"
+    cta_link:
+      type: text
+      label: "CTA Button Link"
+    overlay_opacity:
+      type: select
+      values: [0.3, 0.4, 0.5, 0.6, 0.7]
+      default: 0.5
+    page:
+      type: text
+      label: "Page Identifier"
+      postfix: "e.g., home, tours, contact"
+    status:
+      type: select
+      values: [published, draft]
+      default: draft
+  listing_template: hero_sections_listing.twig
+  listing_records: 10
+  default_status: published
+
+contact_messages:
+  name: Contact Messages
+  singular_name: Contact Message
+  fields:
+    name:
+      type: text
+      required: true
+    email:
+      type: email
+      required: true
+    phone:
+      type: text
+    service:
+      type: select
+      values: [cataratas, itaipu, marco, aves, city-tour, personalizado]
+    message:
+      type: textarea
+      height: 150px
+      required: true
+    status:
+      type: select
+      values: [new, read, replied]
+      default: new
+    ip_address:
+      type: text
+      readonly: true
+  listing_template: contact_messages_listing.twig
+  listing_records: 50
+  default_status: new
+  sort: -datecreated
+  searchable: true

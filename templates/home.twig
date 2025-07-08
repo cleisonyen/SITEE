@@ -1,0 +1,250 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    {% if hero %}
+    <section id="home" class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0">
+            <img src="{{ hero.background_image|image }}" alt="{{ hero.title }}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay" style="background: linear-gradient(rgba(0,0,0,{{ hero.overlay_opacity|default(0.5) }}), rgba(0,0,0,{{ hero.overlay_opacity|default(0.5) }}));"></div>
+        </div>
+
+        <div class="relative z-10 container-custom section-padding text-white">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    {{ hero.title }}
+                </h1>
+                
+                {% if hero.subtitle %}
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                    {{ hero.subtitle }}
+                </p>
+                {% endif %}
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    {% if hero.cta_link %}
+                    <a href="{{ hero.cta_link }}" class="btn-primary flex items-center justify-center space-x-2 text-lg">
+                        <span>{{ hero.cta_text|default('Know More') }}</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    {% endif %}
+                    <a href="{{ path('tours_listing') }}" class="btn-secondary bg-white bg-opacity-20 border-white text-white hover:bg-white hover:text-primary-600">
+                        View Tours
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-primary-500 p-3 rounded-full">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">10,000+</div>
+                            <div class="text-gray-300">Happy Customers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-primary-500 p-3 rounded-full">
+                            <i class="fas fa-star text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">4.9/5</div>
+                            <div class="text-gray-300">Average Rating</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-primary-500 p-3 rounded-full">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">15+</div>
+                            <div class="text-gray-300">Unique Destinations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white rounded-full mt-2"></div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Travel Safe Section -->
+    {% if travel_safe_items %}
+    <section id="travel-safe" class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Travel Safe
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Everything you need to know for a safe and enjoyable trip to Foz do Iguaçu
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {% for item in travel_safe_items %}
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="bg-{{ item.color|default('primary') }}-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                        <i class="{{ item.icon }} text-{{ item.color|default('primary') }}-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ item.title }}</h3>
+                    <p class="text-gray-600 text-sm mb-4">{{ item.description }}</p>
+                    {% if item.content %}
+                    <div class="text-xs text-gray-500">
+                        {{ item.content|raw }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- About Section -->
+    {% if about %}
+    <section id="about" class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        {{ about.title }}
+                    </h2>
+                    
+                    <div class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        {{ about.content|raw }}
+                    </div>
+
+                    <a href="{{ path('contact') }}" class="btn-primary">
+                        Entre em contato conosco
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="/assets/images/about-1.jpg" alt="Iguazu Falls" class="w-full h-48 object-cover rounded-lg shadow-lg lazy-load" data-src="/assets/images/about-1.jpg">
+                        <img src="/assets/images/about-2.jpg" alt="Itaipu Dam" class="w-full h-32 object-cover rounded-lg shadow-lg lazy-load" data-src="/assets/images/about-2.jpg">
+                    </div>
+                    <div class="mt-8">
+                        <img src="/assets/images/about-3.jpg" alt="Three Borders Landmark" class="w-full h-64 object-cover rounded-lg shadow-lg lazy-load" data-src="/assets/images/about-3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Featured Tours Section -->
+    {% if tours %}
+    <section id="tours" class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Our Tours
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Discover the best of Foz do Iguaçu with our carefully crafted tour experiences
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for tour in tours %}
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="{{ tour.featured_image|image }}" alt="{{ tour.title }}" class="w-full h-full object-cover lazy-load" data-src="{{ tour.featured_image|image }}">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                        {% if tour.price %}
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            {{ tour.price }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ tour.title }}</h3>
+                        <p class="text-gray-600 mb-4">{{ tour.description }}</p>
+                        
+                        {% if tour.highlights %}
+                        <ul class="space-y-2 mb-6">
+                            {% for highlight in tour.highlights|slice(0, 3) %}
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-500 rounded-full mr-2"></div>
+                                {{ highlight.highlight }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        <a href="{{ path('tour_detail', {'slug': tour.slug}) }}" class="w-full btn-primary block text-center">
+                            See More
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="{{ path('tours_listing') }}" class="btn-secondary">
+                    View All Tours
+                </a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Testimonials Section -->
+    {% if testimonials %}
+    <section id="testimonials" class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Read testimonials from travelers who experienced the magic of Foz do Iguaçu with us
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for testimonial in testimonials %}
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        {% if testimonial.photo %}
+                        <img src="{{ testimonial.photo|image }}" alt="{{ testimonial.name }}" class="w-12 h-12 rounded-full object-cover mr-4">
+                        {% else %}
+                        <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">{{ testimonial.name|slice(0,1) }}</span>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <h4 class="font-semibold text-gray-800">{{ testimonial.name }}</h4>
+                            <div class="flex items-center">
+                                {% for i in 1..5 %}
+                                <i class="fas fa-star text-yellow-400 text-sm {{ i <= testimonial.rating ? '' : 'text-gray-300' }}"></i>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"{{ testimonial.review }}"</p>
+                    <div class="text-sm text-gray-500">
+                        {% if testimonial.tour_taken %}
+                        <p class="mb-1">Tour: {{ testimonial.tour_taken }}</p>
+                        {% endif %}
+                        <p>{{ testimonial.date|date('F Y') }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+{% endblock %}

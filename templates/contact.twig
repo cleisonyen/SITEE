@@ -1,0 +1,228 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    {% if hero %}
+    <section class="relative h-96 flex items-center">
+        <div class="absolute inset-0">
+            <img src="{{ hero.background_image|image }}" alt="{{ hero.title }}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 container-custom text-white text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ hero.title }}</h1>
+            {% if hero.subtitle %}
+            <p class="text-xl text-gray-200">{{ hero.subtitle }}</p>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            {% if not hero %}
+            <div class="text-center mb-16">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ready for an unforgettable experience? Get in touch and plan your Foz do Iguaçu adventure
+                </p>
+            </div>
+            {% endif %}
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8">Get in Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <i class="fas fa-phone text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Phone</h4>
+                                <p class="text-gray-600">+55 (45) 99999-9999</p>
+                                <p class="text-gray-600">+55 (45) 3333-3333</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">info@ebl-tours.com</p>
+                                <p class="text-gray-600">reservations@ebl-tours.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-600">
+                                    Av. das Cataratas, 1234<br>
+                                    Centro - Foz do Iguaçu/PR<br>
+                                    Brazil, CEP: 85851-000
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <i class="fas fa-clock text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Business Hours</h4>
+                                <p class="text-gray-600">
+                                    Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                    Saturday: 8:00 AM - 4:00 PM<br>
+                                    Sunday: 9:00 AM - 3:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <div class="mt-8">
+                        <a href="https://wa.me/5545999999999" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8">Send us a Message</h3>
+
+                    {% if success %}
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center mb-8">
+                        <i class="fas fa-check-circle text-green-500 text-3xl mb-4"></i>
+                        <h4 class="text-lg font-semibold text-green-800 mb-2">Message Sent!</h4>
+                        <p class="text-green-600">Thank you for your interest. We'll get back to you soon!</p>
+                    </div>
+                    {% endif %}
+
+                    {% if errors %}
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
+                        <ul class="text-red-600">
+                            {% for error in errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    <form method="POST" action="{{ path('contact') }}" class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Your full name">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="+55 (45) 99999-9999">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service of Interest</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                    <option value="">Select a service</option>
+                                    <option value="cataratas">Iguazu Falls</option>
+                                    <option value="itaipu">Itaipu Dam</option>
+                                    <option value="marco">Three Borders Landmark</option>
+                                    <option value="aves">Bird Park</option>
+                                    <option value="city-tour">City Tour</option>
+                                    <option value="personalizado">Custom Package</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Tell us about your trip..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary flex items-center justify-center space-x-2">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="bg-gray-50">
+        <div class="h-96">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3305117890135!2d-54.58771!3d-25.6953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea7c8f0b3b1b%3A0x1234567890abcdef!2sFoz%20do%20Igua%C3%A7u%2C%20PR%2C%20Brazil!5e0!3m2!1sen!2sus!4v1234567890123" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Form submission with AJAX
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+        submitBtn.disabled = true;
+        
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Show success message
+                this.innerHTML = `
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                        <i class="fas fa-check-circle text-green-500 text-3xl mb-4"></i>
+                        <h4 class="text-lg font-semibold text-green-800 mb-2">Message Sent!</h4>
+                        <p class="text-green-600">Thank you for your interest. We'll get back to you soon!</p>
+                    </div>
+                `;
+            } else {
+                // Show errors
+                let errorHtml = '<div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"><ul class="text-red-600">';
+                data.errors.forEach(error => {
+                    errorHtml += `<li>${error}</li>`;
+                });
+                errorHtml += '</ul></div>';
+                
+                this.insertAdjacentHTML('afterbegin', errorHtml);
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
+    });
+</script>
+{% endblock %}

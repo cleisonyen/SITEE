@@ -1,0 +1,160 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    {% if hero %}
+    <section class="relative h-96 flex items-center">
+        <div class="absolute inset-0">
+            <img src="{{ hero.background_image|image }}" alt="{{ hero.title }}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 container-custom text-white text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ hero.title }}</h1>
+            {% if hero.subtitle %}
+            <p class="text-xl text-gray-200">{{ hero.subtitle }}</p>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Tours Listing -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            {% if not hero %}
+            <div class="text-center mb-16">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Tours</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Discover all our amazing tours and experiences in Foz do Iguaçu
+                </p>
+            </div>
+            {% endif %}
+
+            <!-- Filter/Category buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" data-category="all">All Tours</button>
+                <button class="filter-btn" data-category="cataratas">Iguazu Falls</button>
+                <button class="filter-btn" data-category="itaipu">Itaipu Dam</button>
+                <button class="filter-btn" data-category="city-tour">City Tour</button>
+                <button class="filter-btn" data-category="parque-aves">Bird Park</button>
+                <button class="filter-btn" data-category="personalizado">Custom</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="tours-grid">
+                {% for tour in tours %}
+                <div class="tour-card bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="{{ tour.category }}">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="{{ tour.featured_image|image }}" alt="{{ tour.title }}" class="w-full h-full object-cover lazy-load" data-src="{{ tour.featured_image|image }}">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                        
+                        {% if tour.featured %}
+                        <div class="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            Featured
+                        </div>
+                        {% endif %}
+                        
+                        {% if tour.price %}
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            {{ tour.price }}
+                        </div>
+                        {% endif %}
+                        
+                        {% if tour.difficulty %}
+                        <div class="absolute bottom-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-xs">
+                            {{ tour.difficulty|title }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">{{ tour.title }}</h3>
+                            {% if tour.duration %}
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-clock mr-1"></i>
+                                {{ tour.duration }}
+                            </span>
+                            {% endif %}
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">{{ tour.description }}</p>
+                        
+                        {% if tour.highlights %}
+                        <ul class="space-y-2 mb-6">
+                            {% for highlight in tour.highlights|slice(0, 3) %}
+                            <li class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                {{ highlight.highlight }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        {% if tour.location %}
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            {{ tour.location }}
+                        </div>
+                        {% endif %}
+                        
+                        <div class="flex space-x-2">
+                            <a href="{{ path('tour_detail', {'slug': tour.slug}) }}" class="flex-1 btn-primary text-center">
+                                See More
+                            </a>
+                            <a href="{{ path('contact') }}?tour={{ tour.slug }}" class="btn-secondary px-4">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if tours|length == 0 %}
+            <div class="text-center py-12">
+                <i class="fas fa-search text-gray-400 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">No tours found</h3>
+                <p class="text-gray-500">Check back later for new tour offerings.</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<style>
+    .filter-btn {
+        @apply px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:border-primary-500 hover:text-primary-600 transition-colors;
+    }
+    
+    .filter-btn.active {
+        @apply bg-primary-600 text-white border-primary-600;
+    }
+    
+    .tour-card.hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const category = this.dataset.category;
+            const tourCards = document.querySelectorAll('.tour-card');
+            
+            tourCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
