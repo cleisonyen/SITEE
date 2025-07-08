@@ -1,0 +1,55 @@
+{
+  "company": {
+    "name": "EBL Tours International",
+    "tagline": "The Iguazu Falls Double Experience",
+    "description": "EBL Tours International specializes in providing unforgettable experiences at Iguazu Falls and surrounding attractions. With over 10 years of experience, we ensure safe, professional, and memorable adventures for travelers from around the world."
+  },
+  "contact": {
+    "phones": [
+      {
+        "number": "+55 45 99999-9999",
+        "whatsapp": "5545999999999",
+        "label": "WhatsApp & Calls"
+      },
+      {
+        "number": "+55 45 3574-4555",
+        "whatsapp": null,
+        "label": "Office"
+      }
+    ],
+    "emails": [
+      {
+        "email": "info@ebltoursinternational.com",
+        "label": "General Information"
+      },
+      {
+        "email": "reservations@ebltoursinternational.com",
+        "label": "Reservations"
+      }
+    ],
+    "address": {
+      "street": "Rua Almirante Barroso, 1300",
+      "neighborhood": "Centro",
+      "city": "Foz do Iguaçu",
+      "state": "PR",
+      "country": "Brazil",
+      "zipcode": "85851-010"
+    },
+    "hours": {
+      "monday_friday": "8:00 AM - 6:00 PM",
+      "saturday": "8:00 AM - 4:00 PM",
+      "sunday": "9:00 AM - 3:00 PM"
+    },
+    "social_media": {
+      "facebook": "https://facebook.com/ebltoursinternational",
+      "instagram": "https://instagram.com/ebltoursinternational",
+      "youtube": "https://youtube.com/ebltoursinternational",
+      "tripadvisor": "https://tripadvisor.com/ebltoursinternational"
+    }
+  },
+  "whatsapp": {
+    "default_message": "Hello! I'm interested in booking a tour with EBL Tours International. Could you please provide more information?",
+    "booking_message": "Hi! I'd like to make a reservation. Could you help me with availability and pricing for {tour_name}?",
+    "info_message": "Hello! I need more information about your tours and services. Could you assist me?"
+  }
+}

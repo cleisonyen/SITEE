@@ -58,12 +58,28 @@ tours:
     price:
       type: text
       label: "Price"
+    price_from:
+      type: text
+      label: "Price From"
     duration:
       type: text
       label: "Duration"
+    group_size:
+      type: text
+      label: "Group Size"
+    includes:
+      type: repeater
+      fields:
+        item:
+          type: text
+    excludes:
+      type: repeater
+      fields:
+        item:
+          type: text
     difficulty:
       type: select
-      values: [easy, moderate, challenging]
+      values: [easy, moderate, challenging, family-friendly]
       default: easy
     highlights:
       type: repeater
@@ -73,12 +89,22 @@ tours:
     location:
       type: text
       label: "Location"
+    meeting_point:
+      type: text
+      label: "Meeting Point"
+    departure_time:
+      type: text
+      label: "Departure Time"
     category:
       type: select
-      values: [cataratas, itaipu, city-tour, parque-aves, marco-fronteiras, personalizado]
+      values: [iguazu-falls, itaipu-dam, city-tour, bird-park, three-borders, adventure, cultural, nature, combo-packages]
     featured:
       type: checkbox
       label: "Featured Tour"
+    whatsapp_message:
+      type: textarea
+      label: "WhatsApp Message Template"
+      height: 100px
     meta_description:
       type: text
       label: "Meta Description"

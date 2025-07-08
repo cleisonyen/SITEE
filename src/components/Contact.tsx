@@ -39,11 +39,11 @@ const Contact = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Entre em Contato
+            Contact Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Pronto para viver uma experiência única? Entre em contato conosco e 
-            planeje sua aventura em Foz do Iguaçu
+            Ready for a unique experience? Contact us and 
+            plan your adventure in Foz do Iguaçu
           </p>
         </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-8">
-              Informações de Contato
+              Contact Information
             </h3>
             
             <div className="space-y-6">
@@ -61,8 +61,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">Telefone</h4>
-                  <p className="text-gray-600">(45) 99999-9999</p>
-                  <p className="text-gray-600">(45) 3333-3333</p>
+                  <p className="text-gray-600">+55 (45) 99999-9999</p>
+                  <p className="text-gray-600">+55 (45) 3574-4555</p>
                 </div>
               </div>
 
@@ -72,8 +72,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">E-mail</h4>
-                  <p className="text-gray-600">contato@ebltours.com.br</p>
-                  <p className="text-gray-600">reservas@ebltours.com.br</p>
+                  <p className="text-gray-600">info@ebltoursinternational.com</p>
+                  <p className="text-gray-600">reservations@ebltoursinternational.com</p>
                 </div>
               </div>
 
@@ -84,9 +84,9 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">Endereço</h4>
                   <p className="text-gray-600">
-                    Av. das Cataratas, 1234<br />
+                    Rua Almirante Barroso, 1300<br />
                     Centro - Foz do Iguaçu/PR<br />
-                    CEP: 85851-000
+                    CEP: 85851-010
                   </p>
                 </div>
               </div>
@@ -98,9 +98,9 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">Horário de Funcionamento</h4>
                   <p className="text-gray-600">
-                    Segunda a Sexta: 8h às 18h<br />
-                    Sábado: 8h às 16h<br />
-                    Domingo: 9h às 15h
+                    Monday to Friday: 8:00 AM - 6:00 PM<br />
+                    Saturday: 8:00 AM - 4:00 PM<br />
+                    Sunday: 9:00 AM - 3:00 PM
                   </p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
             {/* WhatsApp Button */}
             <div className="mt-8">
               <a 
-                href="https://wa.me/5545999999999" 
+                href="https://wa.me/5545999999999?text=Hello!%20I'm%20interested%20in%20booking%20a%20tour%20with%20EBL%20Tours%20International.%20Could%20you%20please%20provide%20more%20information?" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
@@ -203,19 +203,19 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     >
                       <option value="">Selecione um serviço</option>
-                      <option value="cataratas">Cataratas do Iguaçu</option>
-                      <option value="itaipu">Usina de Itaipu</option>
-                      <option value="marco">Marco das Três Fronteiras</option>
-                      <option value="aves">Parque das Aves</option>
+                      <option value="iguazu-falls">Iguazu Falls</option>
+                      <option value="itaipu">Itaipu Dam</option>
+                      <option value="three-borders">Three Borders Landmark</option>
+                      <option value="bird-park">Bird Park</option>
                       <option value="city-tour">City Tour</option>
-                      <option value="personalizado">Pacote Personalizado</option>
+                      <option value="custom">Custom Package</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensagem
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -224,7 +224,7 @@ const Contact = () => {
                     onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                    placeholder="Conte-nos mais sobre sua viagem..."
+                    placeholder="Tell us more about your trip..."
                   ></textarea>
                 </div>
 
@@ -233,7 +233,7 @@ const Contact = () => {
                   className="w-full btn-primary flex items-center justify-center space-x-2"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Enviar Mensagem</span>
+                  <span>Send Message</span>
                 </button>
               </form>
             )}

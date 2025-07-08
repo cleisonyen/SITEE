@@ -25,25 +25,30 @@ const Hero = () => {
       <div className="relative z-10 container-custom section-padding text-white">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Descubra as Maravilhas de
-            <span className="text-green-400 block">Foz do Iguaçu</span>
+            The Iguazu Falls
+            <span className="text-green-400 block">Double Experience</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-            Especialistas em turismo há mais de 10 anos, oferecemos experiências únicas 
-            nas Cataratas do Iguaçu, Usina de Itaipu e muito mais!
+            Specialists in tourism for over 10 years, we offer unique experiences 
+            at Iguazu Falls, Itaipu Dam and much more!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button 
-              onClick={scrollToContact}
+            <a
+              href="https://wa.me/5545999999999?text=Hello!%20I'm%20interested%20in%20booking%20a%20tour%20with%20EBL%20Tours%20International.%20Could%20you%20please%20provide%20more%20information?"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center space-x-2 text-lg"
             >
-              <span>Reserve Agora</span>
+              <span>Book Now</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="btn-secondary bg-white bg-opacity-20 border-white text-white hover:bg-white hover:text-green-600">
-              Ver Pacotes
+            </a>
+            <button 
+              onClick={scrollToContact}
+              className="btn-secondary bg-white bg-opacity-20 border-white text-white hover:bg-white hover:text-green-600"
+            >
+              Know More
             </button>
           </div>
 

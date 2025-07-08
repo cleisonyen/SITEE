@@ -1,0 +1,252 @@
+[
+  {
+    "title": "Iguazu Falls Brazilian Side",
+    "slug": "iguazu-falls-brazilian-side",
+    "description": "Experience the breathtaking panoramic views of Iguazu Falls from the Brazilian side. Perfect for photography and getting the full scope of this natural wonder.",
+    "full_description": "<p>The Brazilian side of Iguazu Falls offers spectacular panoramic views of the entire waterfall system. This tour provides the perfect vantage point for photography and appreciation of the falls' magnitude.</p><p>Walk along well-maintained trails through the Atlantic Forest, spot exotic wildlife, and feel the mist from the powerful cascades. The highlight is the viewing platform near the Devil's Throat, where you'll witness the raw power of nature.</p>",
+    "featured_image": "/1.jpg",
+    "price_from": "From $45",
+    "duration": "4-5 hours",
+    "group_size": "Up to 15 people",
+    "difficulty": "easy",
+    "category": "iguazu-falls",
+    "location": "Iguazu National Park, Brazil",
+    "meeting_point": "Hotel pickup available",
+    "departure_time": "8:00 AM or 2:00 PM",
+    "highlights": [
+      {"highlight": "Panoramic views of all 275 waterfalls"},
+      {"highlight": "Devil's Throat viewpoint"},
+      {"highlight": "Atlantic Forest wildlife spotting"},
+      {"highlight": "Professional photography opportunities"},
+      {"highlight": "Air-conditioned transportation"}
+    ],
+    "includes": [
+      {"item": "Round-trip transportation"},
+      {"item": "Professional bilingual guide"},
+      {"item": "Park entrance fees"},
+      {"item": "Hotel pickup and drop-off"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Personal expenses"},
+      {"item": "Tips (optional)"}
+    ],
+    "whatsapp_message": "Hi! I'm interested in booking the Iguazu Falls Brazilian Side tour. Could you please provide more information about availability and pricing?",
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "title": "Iguazu Falls Argentine Side",
+    "slug": "iguazu-falls-argentine-side",
+    "description": "Get up close to the waterfalls on the Argentine side with multiple trails and viewpoints, including the famous Devil's Throat walkway.",
+    "full_description": "<p>The Argentine side offers an intimate experience with Iguazu Falls through three distinct circuits: Upper Circuit, Lower Circuit, and Devil's Throat.</p><p>Walk directly above the falls on the Upper Circuit, get close to the base on the Lower Circuit, and experience the thundering Devil's Throat from just meters away. This comprehensive tour includes the ecological train ride through the jungle.</p>",
+    "featured_image": "/2.jpg",
+    "price_from": "From $55",
+    "duration": "6-8 hours",
+    "group_size": "Up to 15 people",
+    "difficulty": "moderate",
+    "category": "iguazu-falls",
+    "location": "Iguazu National Park, Argentina",
+    "meeting_point": "Hotel pickup available",
+    "departure_time": "8:00 AM",
+    "highlights": [
+      {"highlight": "Three different circuits and viewpoints"},
+      {"highlight": "Devil's Throat up-close experience"},
+      {"highlight": "Ecological train through the jungle"},
+      {"highlight": "Upper and Lower Circuit walks"},
+      {"highlight": "Abundant wildlife observation"}
+    ],
+    "includes": [
+      {"item": "Round-trip transportation"},
+      {"item": "Professional bilingual guide"},
+      {"item": "Park entrance fees"},
+      {"item": "Ecological train tickets"},
+      {"item": "Hotel pickup and drop-off"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Personal expenses"},
+      {"item": "Argentina entry fee (if applicable)"}
+    ],
+    "whatsapp_message": "Hello! I'd like to book the Iguazu Falls Argentine Side tour. Can you tell me about the current availability and what documents I need?",
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "title": "Itaipu Dam Tour",
+    "slug": "itaipu-dam-tour",
+    "description": "Visit the world's second-largest hydroelectric power plant and learn about this engineering marvel that supplies energy to Brazil and Paraguay.",
+    "full_description": "<p>Discover the impressive Itaipu Dam, one of the world's greatest engineering achievements. This tour takes you inside the power plant to see the massive turbines and learn about clean energy production.</p><p>Visit the visitor center with interactive exhibits, enjoy panoramic views from the central viewpoint, and understand the environmental and social impact of this binational project.</p>",
+    "featured_image": "/3.jpg",
+    "price_from": "From $35",
+    "duration": "3-4 hours",
+    "group_size": "Up to 20 people",
+    "difficulty": "easy",
+    "category": "itaipu-dam",
+    "location": "Itaipu Binational, Foz do Iguaçu",
+    "meeting_point": "Hotel pickup available",
+    "departure_time": "9:00 AM or 2:00 PM",
+    "highlights": [
+      {"highlight": "Inside view of the power plant"},
+      {"highlight": "Massive turbine observation"},
+      {"highlight": "Interactive visitor center"},
+      {"highlight": "Panoramic dam viewpoint"},
+      {"highlight": "Environmental education"}
+    ],
+    "includes": [
+      {"item": "Round-trip transportation"},
+      {"item": "Professional bilingual guide"},
+      {"item": "Entrance fees"},
+      {"item": "Technical tour inside the dam"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Personal expenses"}
+    ],
+    "whatsapp_message": "Hi! I'm interested in the Itaipu Dam tour. Could you provide information about schedules and what to expect during the visit?",
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "title": "Bird Park (Parque das Aves)",
+    "slug": "bird-park-tour",
+    "description": "Explore Latin America's largest bird park with over 1,400 birds from 140 species in immersive aviaries and natural habitats.",
+    "full_description": "<p>Step into the magical world of tropical birds at Parque das Aves, home to over 1,400 birds from 140 different species. Walk through immersive aviaries where colorful toucans, parrots, and exotic birds fly freely around you.</p><p>The park focuses on conservation and education, featuring rescued birds and breeding programs for endangered species. Don't miss the butterfly house and reptile exhibits.</p>",
+    "featured_image": "/4.jpg",
+    "price_from": "From $25",
+    "duration": "2-3 hours",
+    "group_size": "Up to 15 people",
+    "difficulty": "easy",
+    "category": "bird-park",
+    "location": "Parque das Aves, Foz do Iguaçu",
+    "meeting_point": "Park entrance or hotel pickup",
+    "departure_time": "9:00 AM or 2:00 PM",
+    "highlights": [
+      {"highlight": "1,400+ birds from 140 species"},
+      {"highlight": "Immersive walk-through aviaries"},
+      {"highlight": "Butterfly house experience"},
+      {"highlight": "Conservation education programs"},
+      {"highlight": "Perfect for families"}
+    ],
+    "includes": [
+      {"item": "Park entrance fees"},
+      {"item": "Self-guided tour map"},
+      {"item": "Transportation (if selected)"}
+    ],
+    "excludes": [
+      {"item": "Guide service"},
+      {"item": "Meals and beverages"},
+      {"item": "Souvenir photos"}
+    ],
+    "whatsapp_message": "Hello! I'd like to visit the Bird Park. Can you help me with tickets and transportation options?",
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "title": "Three Borders Landmark",
+    "slug": "three-borders-landmark",
+    "description": "Visit the point where Brazil, Argentina, and Paraguay meet. Enjoy cultural shows, local cuisine, and panoramic views of three countries.",
+    "full_description": "<p>Experience the unique geographical point where three countries converge at the Three Borders Landmark. This cultural and historical site offers stunning views of the Iguazu and Paraná rivers.</p><p>Enjoy traditional shows, taste local cuisine from all three countries, and learn about the region's history. The evening light show is particularly spectacular.</p>",
+    "featured_image": "/5.jpg",
+    "price_from": "From $20",
+    "duration": "2-3 hours",
+    "group_size": "Up to 20 people",
+    "difficulty": "easy",
+    "category": "three-borders",
+    "location": "Marco das Três Fronteiras",
+    "meeting_point": "Hotel pickup available",
+    "departure_time": "4:00 PM or 6:00 PM",
+    "highlights": [
+      {"highlight": "Three countries in one view"},
+      {"highlight": "Cultural shows and performances"},
+      {"highlight": "Local cuisine tasting"},
+      {"highlight": "Historical exhibitions"},
+      {"highlight": "Evening light show"}
+    ],
+    "includes": [
+      {"item": "Entrance fees"},
+      {"item": "Cultural show"},
+      {"item": "Transportation (if selected)"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Personal expenses"},
+      {"item": "Optional activities"}
+    ],
+    "whatsapp_message": "Hi! I'm interested in visiting the Three Borders Landmark. What's the best time to go and what's included?",
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "title": "Foz do Iguaçu City Tour",
+    "slug": "foz-city-tour",
+    "description": "Discover the multicultural city of Foz do Iguaçu, visiting the Buddhist Temple, Omar Ibn Al-Khattab Mosque, and other cultural landmarks.",
+    "full_description": "<p>Explore the diverse cultural heritage of Foz do Iguaçu on this comprehensive city tour. Visit the beautiful Buddhist Temple with its gardens and meditation spaces, the impressive Omar Ibn Al-Khattab Mosque, and other significant landmarks.</p><p>Learn about the city's multicultural population and how different communities have shaped this unique border city.</p>",
+    "featured_image": "/6.jpg",
+    "price_from": "From $30",
+    "duration": "4 hours",
+    "group_size": "Up to 15 people",
+    "difficulty": "easy",
+    "category": "city-tour",
+    "location": "Foz do Iguaçu City",
+    "meeting_point": "Hotel pickup",
+    "departure_time": "9:00 AM or 2:00 PM",
+    "highlights": [
+      {"highlight": "Buddhist Temple and gardens"},
+      {"highlight": "Omar Ibn Al-Khattab Mosque"},
+      {"highlight": "Cathedral of St. John the Baptist"},
+      {"highlight": "Cultural diversity exploration"},
+      {"highlight": "Local market visit"}
+    ],
+    "includes": [
+      {"item": "Round-trip transportation"},
+      {"item": "Professional guide"},
+      {"item": "All entrance fees"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Personal purchases"},
+      {"item": "Tips"}
+    ],
+    "whatsapp_message": "Hello! I'd like to book the Foz do Iguaçu City Tour. Can you tell me more about the cultural sites we'll visit?",
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "title": "Iguazu Falls Complete Experience",
+    "slug": "iguazu-falls-complete",
+    "description": "The ultimate Iguazu experience combining both Brazilian and Argentine sides in a comprehensive 2-day package.",
+    "full_description": "<p>Experience the complete wonder of Iguazu Falls with our 2-day comprehensive package. Day 1 covers the Brazilian side for panoramic views and photography, while Day 2 explores the Argentine side with its three circuits and up-close encounters.</p><p>This package is perfect for those who want to fully appreciate one of the world's most spectacular natural wonders from every angle.</p>",
+    "featured_image": "/7.jpg",
+    "price_from": "From $95",
+    "duration": "2 days",
+    "group_size": "Up to 15 people",
+    "difficulty": "moderate",
+    "category": "combo-packages",
+    "location": "Iguazu National Parks (Brazil & Argentina)",
+    "meeting_point": "Hotel pickup both days",
+    "departure_time": "8:00 AM both days",
+    "highlights": [
+      {"highlight": "Both Brazilian and Argentine sides"},
+      {"highlight": "All major viewpoints and circuits"},
+      {"highlight": "Devil's Throat from both countries"},
+      {"highlight": "Ecological train experience"},
+      {"highlight": "Complete falls experience"}
+    ],
+    "includes": [
+      {"item": "2 days of transportation"},
+      {"item": "Professional bilingual guide"},
+      {"item": "All park entrance fees"},
+      {"item": "Ecological train tickets"},
+      {"item": "Hotel pickup and drop-off"}
+    ],
+    "excludes": [
+      {"item": "Meals and beverages"},
+      {"item": "Argentina entry fee (if applicable)"},
+      {"item": "Personal expenses"}
+    ],
+    "whatsapp_message": "Hi! I'm interested in the complete Iguazu Falls experience. Can you provide details about the 2-day package and pricing?",
+    "featured": true,
+    "status": "published"
+  }
+]

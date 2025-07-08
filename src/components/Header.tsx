@@ -32,15 +32,15 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4" />
-              <span>(45) 99999-9999</span>
+              <span>+55 (45) 99999-9999</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="w-4 h-4" />
-              <span>contato@ebltours.com.br</span>
+              <span>info@ebltoursinternational.com</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span>Especialistas em turismo em Foz do Iguaçu</span>
+            <span>The Iguazu Falls Double Experience</span>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="flex items-center">
             <img 
               src="/EBL_Tour_Logo_4K-removebg-preview-removebg-preview.png" 
-              alt="EBL Tours" 
+              alt="EBL Tours International" 
               className="h-12 w-auto"
             />
           </div>
@@ -62,31 +62,31 @@ const Header = () => {
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
-              Início
+              Home
             </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
-              Sobre
+              About
             </button>
             <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
-              Serviços
+              Services
             </button>
             <button 
               onClick={() => scrollToSection('gallery')}
               className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
-              Galeria
+              Gallery
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="btn-primary"
             >
-              Contato
+              Contact
             </button>
           </div>
 
@@ -107,31 +107,31 @@ const Header = () => {
                 onClick={() => scrollToSection('home')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50"
               >
-                Início
+                Home
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50"
               >
-                Sobre
+                About
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50"
               >
-                Serviços
+                Services
               </button>
               <button 
                 onClick={() => scrollToSection('gallery')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50"
               >
-                Galeria
+                Gallery
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-2 text-green-600 font-medium"
               >
-                Contato
+                Contact
               </button>
             </div>
           </div>

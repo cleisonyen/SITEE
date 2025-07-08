@@ -9,14 +9,14 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Sua Experiência é Nossa
-              <span className="text-green-600 block">Prioridade</span>
+              Your Experience is Our
+              <span className="text-green-600 block">Priority</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              A EBL Tours nasceu da paixão por mostrar as belezas naturais de Foz do Iguaçu. 
-              Com mais de uma década de experiência, somos especialistas em criar momentos 
-              inesquecíveis para nossos clientes.
+              EBL Tours International was born from the passion to show the natural beauties of Foz do Iguaçu. 
+              With over a decade of experience, we are specialists in creating unforgettable moments 
+              for our clients from around the world.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -25,8 +25,8 @@ const About = () => {
                   <Award className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Excelência</h3>
-                  <p className="text-gray-600 text-sm">Reconhecidos pela qualidade dos nossos serviços</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">Excellence</h3>
+                  <p className="text-gray-600 text-sm">Recognized for the quality of our services</p>
                 </div>
               </div>
 
@@ -35,8 +35,8 @@ const About = () => {
                   <Shield className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Segurança</h3>
-                  <p className="text-gray-600 text-sm">Todos os protocolos de segurança seguidos</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">Safety</h3>
+                  <p className="text-gray-600 text-sm">All safety protocols followed</p>
                 </div>
               </div>
 
@@ -45,8 +45,8 @@ const About = () => {
                   <Heart className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Paixão</h3>
-                  <p className="text-gray-600 text-sm">Amor genuíno pelo que fazemos</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">Passion</h3>
+                  <p className="text-gray-600 text-sm">Genuine love for what we do</p>
                 </div>
               </div>
 
@@ -55,15 +55,20 @@ const About = () => {
                   <Clock className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Pontualidade</h3>
-                  <p className="text-gray-600 text-sm">Sempre no horário combinado</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">Punctuality</h3>
+                  <p className="text-gray-600 text-sm">Always on time as agreed</p>
                 </div>
               </div>
             </div>
 
-            <button className="btn-primary">
-              Conheça Nossa História
-            </button>
+            <a 
+              href="https://wa.me/5545999999999?text=Hello!%20I'd%20like%20to%20know%20more%20about%20EBL%20Tours%20International%20and%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-block"
+            >
+              Contact Us
+            </a>
           </div>
 
           {/* Images */}
